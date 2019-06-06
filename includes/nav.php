@@ -16,7 +16,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Category
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropsodown">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <?php
             $sql = "select * from prodcat";
             $result = $conn->query($sql);
@@ -32,39 +32,51 @@
                } ?>
         </div>
       </li>
+    </ul>
 
-       <div class="" style="position:absolute;right:0">
-         <div class="my-auto" style="color:white;">
-           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-             <form class="form-inline my-2 my-lg-0" style="padding-left: 585px;">
-             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-             </form>
-             <?php if(isset($_SESSION['name'])){ ?>
-             <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 <?php echo $_SESSION["name"]; ?>
+    <div class="my-auto" style="color:white;">
+						<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item dropdown">
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </li>
+              <li class="nav-item" style="padding-left: 5px;color:black">
+               <a class="nav-link" href="/view/product/cart.php">Cart
+                 (<?php
+                  if (isset($_SESSION['cart'])) {
+                    echo $_SESSION['top'];
+                  }else {
+                    echo '0';
+                  }
+                 ?>)
                </a>
-               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-               <a class="dropdown-item" href="/out.php">Logout</a>
-              <?php if($_SESSION['admin']==="1"){ ?>
-               <a class="dropdown-item" href="/view/admin/index.php">Admin page</a>
-             <?php } ?>
-               </div>
-             </li>
-             <?php }else{ ?>
-             <li class="nav-item" style="padding-left: 5px;">
-              <a class="nav-link" href="/view/user/login.php">Log in</a>
-             </li>
+              </li>
+            <?php if(isset($_SESSION['name'])){ ?>
+              <li class="nav-item dropdown">
 
-             <li class="nav-item" >
-             <a class="nav-link" href="/view/user/signup.php">Sign Up</a>
-             </li>
-             <?php } ?>
-             </ul>
+                <a class="nav-link dropdown-toggle" href="" id="dropdownMenuReference" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <?php echo $_SESSION["name"]; ?>
+                </a>
 
-         </div>
-       </div>
-      </ul>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuReference" >
+                <a class="dropdown-item" href="/out.php">Logout</a>
+               <?php if($_SESSION['admin']==="1"){ ?>
+                <a class="dropdown-item" href="/view/admin/index.php">Admin page</a>
+              <?php } ?>
+                </div>
+              </li>
+
+            <?php }else{ ?>
+              <li class="nav-item" style="padding-left: 5px;">
+               <a class="nav-link" href="/view/user/login.php">Log in</a>
+              </li>
+            <?php } ?>
+
+						</ul>
+					</div>
+
+
   </div>
 </nav>
