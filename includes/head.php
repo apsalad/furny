@@ -49,5 +49,31 @@ toastr.options = {
 <?php
 		unset($_SESSION['success']);
 			}
+?>
 
+<?php if(isset($_SESSION['warning'])){ ?>
+<script>
+	toastr.warning("<?php echo $_SESSION['warning']; ?>");
+</script>
+<?php
+		unset($_SESSION['warning']);
+			}
+?>
+
+<?php if(isset($_SESSION['info'])){ ?>
+<script>
+	toastr.info("<?php echo $_SESSION['info']; ?>");
+</script>
+<?php
+		unset($_SESSION['info']);
+			}
+?>
+
+<?php if(isset($_SESSION['danger'])){ ?>
+<script>
+	toastr.success("<?php echo $_SESSION['danger']; ?>");
+</script>
+<?php
+		unset($_SESSION['danger']);
+			}
 ?>
