@@ -22,7 +22,14 @@ $row=$result->fetch_assoc();
       <h1 ><?php echo $row['pname']?></h1>
       <p class="price">Rs.<?php echo $row['pprice']?></p>
       <p><?php echo $row['pdes']?></p>
-      <p><button class="btn btn-success">Add to Cart</button></p>
+      <p><?php echo $row['pstock']?></p>
+      <p>
+          <form action="addcart.php" method="post">
+            <input type="text" name="pid" value="<?php echo $row['pid']?>" hidden>
+            <input type="text" name="quantity" class="form-control" value="1"><br>
+            <button type="submit" class="btn btn-success">Add to Cart</button></p>
+          </form>
+
       <hr>
       <span>User Rating</span>
       <span class="fa fa-star" style="color:gold"></span>
