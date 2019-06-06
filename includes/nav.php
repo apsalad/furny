@@ -46,7 +46,7 @@
                <a class="nav-link" href="/view/product/cart.php">Cart
                  (<?php
                   if (isset($_SESSION['cart'])) {
-                    echo $_SESSION['top'];
+                    echo count($_SESSION['cart']);
                   }else {
                     echo '0';
                   }

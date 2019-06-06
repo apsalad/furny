@@ -1,5 +1,6 @@
  <?php
   include("../../connect.php");
+  session_unset();
   session_start();
   $username=$_POST['email'];
   $password = $_POST['password'];
@@ -31,7 +32,7 @@
           $flag=0;
           break;
         }
-      
+
     }
   }
   else {

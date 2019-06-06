@@ -18,11 +18,8 @@ include '../../includes/nav.php';
   </div>
 
   <?php
-    if (isset($_SESSION['top'])) {
-        $top = $_SESSION['top'];
-    }
     //echo $top;
-    if (isset($_SESSION['cart']) && $top!=0 ) {
+    if (isset($_SESSION['cart']) && count($_SESSION['cart'])!=0 ) {
 
     $cart = $_SESSION['cart'];
     //print_r($cart);
