@@ -14,14 +14,21 @@ if (!isset($_SESSION['cart'])) {
 
 for ($i=0; $i < $quantity; $i++) {
   $_SESSION['cart'][$_SESSION['top']]=$pid;
-  echo $_SESSION['cart'][$_SESSION['top']]."<br>";
+  //echo $_SESSION['cart'][$_SESSION['top']]."<br>";
   $_SESSION['top']++;
-  echo $_SESSION['top']."<br>";
+  //echo $_SESSION['top']."<br>";
 }
-//print_r($_SESSION['cart']);
-//echo "<br>";
-//unset($_SESSION['pid']);
-//unset($_SESSION['quantity']);
+?>
+
+<?php include '../../includes/head.php'; ?>
+<div class="d-flex justify-content-center mt-5">
+  <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<?php include '../../includes/foot.php'; ?>
+
+<?php
 ob_start();
 header("Location:addedcart.php?pid=".$pid."&quantity=".$quantity);
 exit;
