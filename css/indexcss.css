@@ -1,0 +1,22 @@
+div.car{
+	height: 50px;
+}
+
+a{
+	color: black;
+}
+
+a:hover{
+	color: darkslategray;
+	text-decoration: none;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+body {
+  font-family: Arial;
+
+}
