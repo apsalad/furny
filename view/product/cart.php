@@ -3,7 +3,7 @@ include '../../connect.php';
 include '../../includes/head.php';
 include '../../includes/nav.php';
 ?>
-<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/furny/css/style.css">
   <h1>Shopping Cart</h1>
 
 <div class="shopping-cart" style="margin-top:10vh;margin-bottom:5vh;">

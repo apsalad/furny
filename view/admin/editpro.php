@@ -14,7 +14,7 @@ include '../../includes/head.php';
   $row = $result->fetch_assoc();
   ?>
 
-  <div class="container">
+  <div class="container"> 
     <form enctype="multipart/form-data" action="savepro.php" method="POST" >
 
       <input type="hidden" name="MAX_FILE_SIZE" value="9000000" />

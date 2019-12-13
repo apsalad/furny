@@ -28,7 +28,7 @@
           $_SESSION['phone']=$row["phone"];
           $_SESSION['admin']=$row["admin"];
           //echo $_SESSION['name'];
-          header("refresh:0.0001 ; url='/index.php'");
+          header("refresh:0.0001 ; url='/furny/index.php'");
           $flag=0;
           break;
         }

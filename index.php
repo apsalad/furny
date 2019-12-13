@@ -12,13 +12,13 @@ include 'includes/nav.php';
 	  </ol>
 	  <div class="carousel-inner">
 	    <div class="carousel-item active">
+	      <img src="static/7.jpg" class="d-block w-100" alt="..." height="530">
+	    </div>
+	    <div class="carousel-item">
 	      <img src="static/1.jpg" class="d-block w-100" alt="..." height="530">
 	    </div>
 	    <div class="carousel-item">
 	      <img src="static/22.jpg" class="d-block w-100" alt="..." height="530">
-	    </div>
-	    <div class="carousel-item">
-	      <img src="static/7.jpg" class="d-block w-100" alt="..." height="530">
 	    </div>
 	  </div>
 	  <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">

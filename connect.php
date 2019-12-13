@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "furn";
 $port = "3306";
 
@@ -11,4 +11,5 @@ $conn = new mysqli($servername, $username, $password, $dbname,$port);
 if (!$conn) {
     die("Connection failed: " . $conn->error());
 }
+
 ?>

@@ -14,7 +14,7 @@ if($conn->query($sql)){
   $_SESSION['success']="Product updated successfully!";
   echo "success";
 }
-else {
+else { 
   echo $conn->error;
 }
 
